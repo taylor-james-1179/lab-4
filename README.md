@@ -1,6 +1,4 @@
-# CS162 Lab 4 (Master)
-
-[![Build Status](https://travis-ci.com/cs162-master/lab-4.svg?token=KCtocBsWB4PLE6uyTR3Q&branch=master)](https://travis-ci.com/cs162-master/lab-4)
+# CS162 Lab 4
 
 ## Introduction
 
