@@ -2,7 +2,7 @@
 """A recursive Python program to count consonants in a string."""
 
 
-def _is_consonant(character):
+def _is_consonant(char):
     """
     Test whether a character is an English consonant.
 
@@ -17,7 +17,7 @@ def _is_consonant(character):
         True if char is a consonant in the English alphabet, otherwise False.
 
     """
-    pass
+    return not (char.upper() in ["A", "E", "I", "O", "U"]) and char.isalpha()
 
 
 def count_consonants(text):
@@ -39,4 +39,6 @@ def count_consonants(text):
         The total number of consonants found in text.
 
     """
-    pass
+    if text == "":
+        raise ValueError
+    return (1 if _is_consonant(text[0]) else 0) + (0 if text[1:] == "" else count_consonants(text[1:]))

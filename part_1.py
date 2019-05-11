@@ -2,7 +2,7 @@
 """A recursive Python program to check if a given number is palindrome."""
 
 
-def _reverse_number(number):
+def _reverse_number(num):
     """
     Reverse a number.
 
@@ -21,7 +21,7 @@ def _reverse_number(number):
         A new value consisting of the digits of number in reversed order.
 
     """
-    pass
+    return int(str(num) if num < 10 else str(num % 10) + str(_reverse_number(num // 10)))
 
 
 def is_palindrome(number):
@@ -39,4 +39,6 @@ def is_palindrome(number):
         True is number is a palindrome, otherwise False.
 
     """
-    pass
+    if not(isinstance(number, int)):
+        raise ValueError
+    return number == _reverse_number(number)
