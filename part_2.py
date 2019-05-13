@@ -41,4 +41,6 @@ def count_consonants(text):
     """
     if text == "":
         raise ValueError
-    return (1 if _is_consonant(text[0]) else 0) + (0 if text[1:] == "" else count_consonants(text[1:]))
+    return (1 if _is_consonant(text[0]) else 0) + (
+        0 if text[1:] == "" else count_consonants(text[1:])
+    )

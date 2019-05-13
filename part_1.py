@@ -21,7 +21,9 @@ def _reverse_number(num):
         A new value consisting of the digits of number in reversed order.
 
     """
-    return int(str(num) if num < 10 else str(num % 10) + str(_reverse_number(num // 10)))
+    return int(
+        str(num) if num < 10 else str(num % 10) + str(_reverse_number(num // 10))
+    )
 
 
 def is_palindrome(number):
@@ -39,6 +41,6 @@ def is_palindrome(number):
         True is number is a palindrome, otherwise False.
 
     """
-    if not(isinstance(number, int)):
+    if not (isinstance(number, int)):
         raise ValueError
     return number == _reverse_number(number)

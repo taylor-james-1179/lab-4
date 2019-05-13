@@ -7,9 +7,9 @@ python:
   - "3.7"
 script:
   - pytest
-  - pylint part_1.py part_2.py part_3.py
-  - pycodestyle part_1.py part_2.py part_3.py
-  - pydocstyle part_1.py part_2.py part_3.py
+  - pylint part_1.py part_2.py hanoi.py
+  - pycodestyle part_1.py part_2.py hanoi.py
+  - pydocstyle part_1.py part_2.py hanoi.py
 notifications:
   email:
     recipients:
